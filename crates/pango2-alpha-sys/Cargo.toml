@@ -1,0 +1,18 @@
+[package]
+name = "pango2-alpha-sys"
+version = "0.1.0"
+edition = "2021"
+links = "pango2"
+
+[lib]
+name = "pango2_sys"
+path = "src/lib.rs"
+
+[dependencies]
+pango2-alpha-cairo-sys = { path = "../pango2-alpha-cairo-sys" }
+pango2-alpha-harfbuzz-sys = { path = "../pango2-alpha-harfbuzz-sys" }
+freetype-sys = "0.17.0"
+
+[build-dependencies]
+pkg-config = "0.3.27"
+bindgen = "0.66.1"

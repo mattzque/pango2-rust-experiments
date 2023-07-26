@@ -1,0 +1,16 @@
+[package]
+name = "pango2-alpha-cairo-sys"
+version = "0.1.0"
+edition = "2021"
+links = "cairo"
+
+[lib]
+name = "cairo_sys"
+path = "src/lib.rs"
+
+[dependencies]
+freetype-sys = "0.17.0"
+
+[build-dependencies]
+pkg-config = "0.3.27"
+bindgen = "0.66.1"

@@ -1,0 +1,23 @@
+diff --git a/examples/optical-margins.c b/examples/optical-margins.c
+index 8d03488c66046990a8df6a915b18c8e71ddf018c..12f4160079bb075c34defa98ccf3c39ad30f0ba9 100644
+--- a/examples/optical-margins.c
++++ b/examples/optical-margins.c
+@@ -93,11 +93,18 @@ get_bound (Pango2Font     *font,
+   if (hb_set_is_empty (lookups))
+     res = get_fallback_bound (font, ch);
+   else
++#if HB_VERSION_ATLEAST(5,3,0)
++    res = hb_ot_layout_lookup_get_optical_bound (hb_font,
++                                          hb_set_get_min (lookups),
++                                          direction,
++                                          glyph);
++#else
+     res = hb_ot_layout_get_optical_bound (hb_font,
+                                           hb_set_get_min (lookups),
+                                           direction,
+                                           glyph);
+ 
++#endif
+   hb_set_destroy (lookups);
+ 
+   return res;

@@ -1,0 +1,2 @@
+[workspace]
+members = ["crates/pango2-alpha-cairo-sys", "crates/pango2-alpha-harfbuzz-sys", "crates/pango2-alpha-sys", "crates/pango2-alpha-examples"]

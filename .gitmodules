@@ -1,0 +1,9 @@
+[submodule "vendor/harfbuzz"]
+	path = vendor/harfbuzz
+	url = https://github.com/harfbuzz/harfbuzz.git
+[submodule "vendor/pango"]
+	path = vendor/pango
+	url = https://gitlab.gnome.org/GNOME/pango.git
+[submodule "vendor/cairo"]
+	path = vendor/cairo
+	url = https://gitlab.freedesktop.org/cairo/cairo.git

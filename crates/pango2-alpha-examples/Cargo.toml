@@ -1,0 +1,28 @@
+[package]
+name = "pango2-alpha-examples"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name="pango2_sys_examples"
+path="src/lib.rs"
+
+[[bin]]
+name="custom_font"
+path="src/custom_font.rs"
+
+[[bin]]
+name="buffer_font"
+path="src/buffer_font.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pango2-alpha-cairo-sys = { path = "../pango2-alpha-cairo-sys" }
+pango2-alpha-harfbuzz-sys = { path = "../pango2-alpha-harfbuzz-sys" }
+pango2-alpha-sys = { path = "../pango2-alpha-sys" }
+freetype-sys = "0.17.0"
+gobject-sys = "0.17.10"
+
+[dev-dependencies]
+cargo-valgrind = "2.1.0"

@@ -1,0 +1,17 @@
+[package]
+name = "pango2-alpha-harfbuzz-sys"
+version = "0.1.0"
+edition = "2021"
+links = "harfbuzz"
+
+[lib]
+name = "harfbuzz_sys"
+path = "src/lib.rs"
+
+[dependencies]
+pango2-alpha-cairo-sys = { path = "../pango2-alpha-cairo-sys" }
+freetype-sys = "0.17.0"
+
+[build-dependencies]
+pkg-config = "0.3.27"
+bindgen = "0.66.1"
